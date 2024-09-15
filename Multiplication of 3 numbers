@@ -1,0 +1,18 @@
+def multiply_three_numbers(a, b, c):
+    """Multiply three numbers."""
+    return a * b * c
+
+def main():
+    import sys
+    if len(sys.argv) != 5:
+        print("Usage: python calculator.py <num1> <num2> <num3>")
+        return
+    try:
+        num1, num2, num3 = map(float, sys.argv[1:])
+        result = multiply_three_numbers(num1, num2, num3)
+        print(f"The result of multiplying {num1}, {num2}, and {num3} is: {result}")
+    except ValueError:
+        print("Please enter valid numbers.")
+
+if __name__ == "__main__":
+    main()
